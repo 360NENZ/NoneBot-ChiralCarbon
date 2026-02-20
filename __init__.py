@@ -1,4 +1,5 @@
 """
+chiral_carbon_verify/__init__.py
 NoneBot Plugin: Chiral Carbon Verification
 ==========================================
 Verifies group join requests by asking applicants to identify
@@ -25,10 +26,13 @@ require("nonebot_plugin_apscheduler")
 
 from .config import Config
 from .handler import (
-    group_request_handler,
+    group_join_handler,
     verify_answer_handler,
     admin_approve_handler,
     admin_reject_handler,
+    admin_approve_kw,
+    admin_reject_kw,
+    help_handler,
 )
 
 __plugin_meta__ = PluginMetadata(
@@ -47,8 +51,11 @@ __plugin_meta__ = PluginMetadata(
 )
 
 __all__ = [
-    "group_request_handler",
+    "group_join_handler",
     "verify_answer_handler",
     "admin_approve_handler",
     "admin_reject_handler",
+    "admin_approve_kw",
+    "admin_reject_kw",
+    "help_handler",
 ]

@@ -1,3 +1,7 @@
+"""
+chiral_carbon_verify/config.py
+"""
+
 from pydantic import BaseModel
 from typing import List
 
@@ -21,10 +25,10 @@ class Config(BaseModel):
     # ----------------------------------------------------------------
 
     # 用户回答超时时间（秒）
-    chiral_verify_timeout: int = 120
+    chiral_verify_timeout: int = 600
 
     # 最大错误次数
-    chiral_verify_max_attempts: int = 3
+    chiral_verify_max_attempts: int = 5
 
     # 超时/失败后自动拒绝
     chiral_verify_auto_reject: bool = True
@@ -32,5 +36,5 @@ class Config(BaseModel):
     # 管理员 QQ 号列表（可手动审核）
     chiral_verify_admin_ids: List[int] = []
 
-    # 是否在私聊发送题目（False 则在群内 @）
-    chiral_verify_use_private: bool = True
+    # 是否在群聊临时会话发送题目（False 则在群内 @）
+    chiral_verify_use_temp_conversation: bool = True
