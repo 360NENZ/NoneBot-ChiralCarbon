@@ -45,7 +45,7 @@ __plugin_meta__ = PluginMetadata(
     ),
     config=Config,
     extra={
-        "author": "YourName",
+        "author": "360NENZ",
         "version": "1.0.0",
     },
 )

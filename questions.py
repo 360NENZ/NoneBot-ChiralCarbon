@@ -37,7 +37,7 @@ async def fetch_captcha(api_base: str, timeout: float = 10.0) -> CaptchaQuestion
     """
     向远程 API 请求一道手性碳验证题。
 
-    :param api_base: 服务根地址，例如 "http://38.165.22.100:9999"
+    :param api_base: 服务根地址，例如 "http://127.0.0.1:9999"
     :param timeout:  请求超时（秒）
     :raises RuntimeError: 请求失败或响应格式异常时抛出
     """
