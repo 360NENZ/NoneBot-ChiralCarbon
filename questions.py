@@ -49,7 +49,7 @@ async def fetch_captcha(api_base: str, timeout: float = 10.0) -> CaptchaQuestion
     """
     向远程 API 请求一道手性碳验证题。
 
-    :param api_base: 服务根地址，例如 "http://localhost:9999"
+    :param api_base: 服务根地址，例如 "http://38.165.22.100:9999"
     :param timeout:  请求超时（秒）
     :raises RuntimeError: 请求失败或响应格式异常时抛出
     """
@@ -112,7 +112,7 @@ def verify_answer(question: CaptchaQuestion, user_input: str) -> tuple[bool, str
     try:
         user_count = int(user_input.strip())
     except ValueError:
-        return False, "❌ 请输入一个整数，例如输入 "2" 表示有 2 个手性碳。"
+        return False, "❌ 请输入一个整数，例如输入 \"2\"表示有 2 个手性碳。"
 
     name_hint = f"【{question.molecule_name}】" if question.molecule_name else "该化合物"
 
